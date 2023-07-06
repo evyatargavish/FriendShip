@@ -15,9 +15,6 @@ from datetime import datetime, date
 from sqlalchemy import func, desc
 #pip install request
 
-
-
-
 # Context processor to inject notifications into the template context
 # This function retrieves the user's notifications and unread count, sorts and limits the notifications,
 # and injects them into the template context for display.

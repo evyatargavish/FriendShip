@@ -6,7 +6,6 @@ from flask_login import UserMixin
 def load_user(user_id):
     return db.session.query(User).get(int(user_id))
 
-
 #db models that represent the structure of our database
 
 #The User class is a database model representing a user in the application
@@ -61,11 +60,6 @@ class User(db.Model, UserMixin): #inheritance from db.Mode and UserMixin
     def get_help_request(self, post_id):
         help_request = HelpRequest.query.filter_by(sender_id=self.id, post_id=post_id).first()
         return help_request
-
-
-
-
-
 
     #THE FOLLOWING METHODS RUN CYPER QUERIES ON THE NEO4j GRAPH DATABASE
 

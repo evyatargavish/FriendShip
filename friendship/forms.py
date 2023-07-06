@@ -8,7 +8,6 @@ import pycountry
 import phonenumbers
 import requests
 
-
 # This function retrieves a list of phone codes for different countries.
 # It uses the pycountry and phonenumbers libraries to iterate over countries,
 # retrieve the country code, and format the country name with the code.
@@ -19,8 +18,6 @@ def get_phone_codes():
         country_code = phonenumbers.country_code_for_region(country.alpha_2)
         phone_codes.append((country_code, f"{country.name} (+{country_code})"))
     return phone_codes
-
-
 
 #The RegistrationForm class represents a form for user registration in the app
 class RegistrationForm(FlaskForm):
